@@ -8,7 +8,7 @@
 /* Handler for window-repaint event. Call back when the window first appears and
    whenever the window needs to be re-painted. */
 void display() {
-   glClearColor(0.0f, 0.0f, 0.0f, 1.0f); // Set background color to black and opaque
+   glClearColor(0.0f, 1.0f, 0.0f, 1.0f); // Set background color to black and opaque
    glClear(GL_COLOR_BUFFER_BIT);         // Clear the color buffer (background)
  
    // Draw a Red 1x1 Square centered at origin

@@ -1,8 +1,7 @@
-build_and_run_c : 
-	cc main.c -lglut -lGL -lGLU
+example1 : 
+	cc example1_main.c -lglut -lGL -lGLU
 	./a.out
 
-build_and_run_cpp :
-	rm a.out
-	g++ main.cpp -o a.out -lglut -lGLU -lGL
+example2 : 
+	cc example2_main.c -lglut -lGL -lGLU
 	./a.out
