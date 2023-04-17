@@ -3,6 +3,7 @@
  * Draw Simple 2D colored Shapes: quad, triangle and polygon.
  */
 #include <GL/glut.h>  // GLUT, include glu.h and gl.h
+#include <stdio.h>
  
 /* Initialize OpenGL Graphics */
 void initGL() {
@@ -13,10 +14,18 @@ void initGL() {
 /* Handler for window-repaint event. Call back when the window first appears and
    whenever the window needs to be re-painted. */
 void display() {
+   printf(">>> display\n");
    glClear(GL_COLOR_BUFFER_BIT);   // Clear the color buffer with current clearing color
  
    // Define shapes enclosed within a pair of glBegin and glEnd
    glBegin(GL_QUADS);              // Each set of 4 vertices form a quad
+      glColor3f(0.2f, 0.2f, 0.2f); // white
+      glVertex2f(0.0f, 0.0f);
+      glVertex2f(1.0f, 0.0f);
+      glVertex2f(1.0f, 1.0f);
+      glVertex2f(0.0f, 1.0f);
+      
+
       glColor3f(1.0f, 0.0f, 0.0f); // Red
       glVertex2f(-0.8f, 0.1f);     // Define vertices in counter-clockwise (CCW) order
       glVertex2f(-0.2f, 0.1f);     //  so that the normal (front-face) is facing you
@@ -60,6 +69,7 @@ void display() {
       glVertex2f(0.7f, 0.4f);
       glVertex2f(0.6f, 0.6f);
       glVertex2f(0.4f, 0.6f);
+      glColor3f(0.0f, 1.0f, 0.0f); // Green
       glVertex2f(0.3f, 0.4f);
    glEnd();
  
